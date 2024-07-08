@@ -17,8 +17,8 @@ function createDiv() {
         let noOfGridsInARow = document.getElementById("input").value
         if (noOfGridsInARow) {
             console.log("value assigned");
-            if (noOfGridsInARow>100) {
-                noOfGridsInARow=100
+            if (noOfGridsInARow > 100) {
+                noOfGridsInARow = 100
                 alert("maximum no:of grids in a row=100")
             }
         }
@@ -29,7 +29,7 @@ function createDiv() {
 
         gridSize = generateGridSize(noOfGridsInARow)
         //console.log(gridSize);
-        
+
         container.style.cssText = `
         display:flex;
         flex-direction: row;
@@ -59,16 +59,19 @@ function createDiv() {
 }
 
 function reset() {
-    
+
     let grids = document.querySelectorAll(".grid")
     grids.forEach((grid) => { container.removeChild(grid) })
+    document.getElementById("input").value = 0
     canvasCreated = false
 
 }
 
 createDiv()
 
-container.addEventListener('mouseover',(event)=>{
-    console.log(event.target);
-    event.target.style.background = "#ed671f";
+container.addEventListener('mouseover', (event) => {
+    if (canvasCreated) {
+        event.target.style.background = "#ed671f";
+
+    }
 })
