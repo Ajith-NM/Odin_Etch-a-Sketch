@@ -1,0 +1,24 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.inputs{
+    margin: 20px auto;
+    width: fit-content;
+}
+input {
+    padding: 5px 10px;
+    font-size: 18px;
+}
+
+button {
+    margin-left: 10px;
+    font-size: 18px;
+    padding: 5px;
+    
+}
+.hovered{
+    background-color: red;
+}
