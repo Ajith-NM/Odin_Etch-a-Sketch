@@ -54,7 +54,7 @@ function createDiv() {
         }
     }
     else {
-        alert("please press the reset button")
+        alert("please press the reset button before creating a new canvas")
     }
 }
 
