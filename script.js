@@ -49,7 +49,8 @@ function createDiv() {
             div.classList.add("grid")
             div.style.cssText = `background-color:transparent;
              width:${gridSize}px;
-             height:${gridSize}px;`
+             height:${gridSize}px;
+             border:.5px solid black;`
             container.appendChild(div);
         }
     }
